@@ -1,3 +1,6 @@
+autoconf.err
+autotest
+objs
 # Object files
 *.o
 *.ko
@@ -30,4 +33,4 @@
 
 # Debug files
 *.dSYM/
-*.su
+t/servroot
