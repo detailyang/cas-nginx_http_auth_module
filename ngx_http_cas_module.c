@@ -1,9 +1,3 @@
-
-/*
- * Copyright (C) Maxim Dounin
- */
-
-
 #include <ngx_config.h>
 #include <ngx_core.h>
 #include <ngx_http.h>
@@ -229,15 +223,13 @@ ngx_http_cas_done(ngx_http_request_t *r, void *data, ngx_int_t rc)
         {
             ctx->username.data = header[i].value.data;
             ctx->username.len = header[i].value.len;
-            goto found;
+            ctx->status = NGX_HTTP_OK;
+
+            return rc;
         }
     }
 
     ctx->status = NGX_HTTP_UNAUTHORIZED;
-
-    return rc;
-found:
-    ctx->status = NGX_HTTP_OK;
 
     return rc;
 }
