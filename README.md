@@ -46,10 +46,10 @@ ngx_http_barcode requires the following to run:
 Direction
 ------------
 
-* cas_request: enable cas authentication
-Syntax:     cas_request url
-Default:    -
-Context:    server|location
+* cas_request: enable cas authentication        
+Syntax:     cas_request url       
+Default:    -         
+Context:    server|location         
 
 ```
 location / {
